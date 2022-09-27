@@ -1,0 +1,79 @@
+/*******************
+*****Table_Task*****
+*******************/
+
+table tr td {
+    border: 2px solid black;
+    width: 200px;
+    height: 50px;
+    text-align: center;
+}
+
+table .row1 {
+    background-color: #028f8f;
+    color: #000000;
+}
+
+table .row2 {
+    background-color: #f5f502;
+    color: #111810;
+}
+
+table .row1:hover {
+    background-color: #000000;
+    color: #028f8f;
+}
+
+table .row2:hover {
+    background-color: #111810;
+    color: #f5f502;
+}
+
+/*********************
+****MEDICINE_TASK*****
+*********************/
+
+.medicine {
+    height: 150px;
+    width: 150px;
+    margin: 20px;
+    background-color: #d51e1e;
+    border: 1px solid black;
+    position: relative;
+}
+
+.line {
+    background-color: white;
+    border-radius: 5px;
+}
+
+.vertical-line {
+    height: 90px;
+    width: 30px;
+}
+
+.horizontal-line {
+    height: 30px;
+    width: 90px;
+}
+
+.vertical-line-position {
+    position: absolute;
+    top: 30px;
+    left: 60px;
+}
+
+.horizontal-line-position {
+    position: absolute;
+    top: 60px;
+    left: 30px;
+}
+
+
+.vertical-line-transform {
+    transform: translate(60px, 30px);
+}
+
+.horizontal-line-transform {
+    transform: translate(30px, -30px);
+}
