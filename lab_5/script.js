@@ -1,8 +1,10 @@
 "use strict";
 
+// ______ TASK 1 _____
+
 const FORM = document.getElementById("formId");
 
-FORM.addEventListener("submit", (ev) => {
+const submitForm = ev => {
     ev.preventDefault();
 
     let failCondition = false;
@@ -71,4 +73,32 @@ FORM.addEventListener("submit", (ev) => {
         document.getElementById("res-ID-card").innerText = "";
         document.getElementById("res-faculty").innerText = "";
     }
-});
+};
+
+FORM.addEventListener("submit", ev => submitForm(ev));
+
+// ______ TASK 2 _____
+
+const VARIANT_CELL =  document.getElementById("variantCell");
+
+const randomColor = () => {
+    VARIANT_CELL.style.backgroundColor = "#" + Math.floor(Math.random() * 16777215).toString(16);
+};
+
+const paletteColor = () => {
+    const palette = document.getElementById("palette");
+    VARIANT_CELL.style.backgroundColor = palette.value;
+}
+
+const fullColumnPaletteColor = () => {
+    const palette = document.getElementById("palette");
+    const rows = document.querySelectorAll("table tr");
+    rows.forEach((row) => {
+       const cell = row.getElementsByTagName("th")[1];
+       cell.style.backgroundColor = palette.value;
+    });
+}
+
+VARIANT_CELL.addEventListener("mouseover", () => randomColor());
+VARIANT_CELL.addEventListener("click", () => paletteColor());
+VARIANT_CELL.addEventListener("dblclick", () => fullColumnPaletteColor());
