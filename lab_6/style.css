@@ -1,0 +1,45 @@
+body{
+    background-color: #c4b2a1;
+}
+
+#download {
+    padding: 10px 40px;
+    border: 2px solid black;
+    background: cornflowerblue;
+    border-radius: 7px;
+    display: block;
+    margin: auto;
+}
+
+#download:hover {
+    cursor: pointer;
+    background: yellow;
+}
+
+#container{
+    display: flex;
+    flex-direction: row;
+    gap: 2.5vw;
+}
+
+.card{
+    width: 14vw;
+    height: 30vw;
+    background-color: #383846;
+    border: 2px solid black;
+    color: white;
+}
+
+.card-img{
+    width: 14vw;
+    height: 15vw;
+}
+
+p{
+    font-size: 18px;
+}
+
+#resultMsg {
+    text-align: center;
+    font-weight: bold;
+}
