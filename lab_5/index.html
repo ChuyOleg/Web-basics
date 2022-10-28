@@ -1,0 +1,70 @@
+<!doctype html>
+
+<html lang="uk">
+
+<head>
+  <meta charset="utf-8">
+  <title>Чуй О. В. ІП-91, лаб №5, 2 варіант</title>
+  <meta name="description" content="Сторінка лабораторної роботи номер 5">
+  <meta name="keywords"
+        content="Чуй, ІП-91, лаб 2, лабораторна робота номер 2">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="task1-container">
+    <form id='formId' novalidate>
+      <h3>Форма</h3>
+      <label for="name">ПІБ</label><br>
+      <input id="name" type="text" required
+             placeholder="ТТТТ Т.Т." pattern="[a-zA-Zа-яА-ЯіІїЇєЄ]+ [a-zA-Zа-яА-ЯіІїЇєЄ]{1}.[a-zA-Zа-яА-ЯіІїЇєЄ]{1}."><br>
+      <div id="invalid-pib" class="error" hidden>
+        ПІБ має складатись з букв кирилиці або латиниці та крапок після ініціалів
+      </div>
+
+      <label for="group">Група</label><br>
+      <input maxlength="5" id="group" type="text" required
+             placeholder="ТТ-ЧЧ" pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{2}-\d{2}"><br>
+      <div id="invalid-group" class="error" hidden>
+        Потрібно ввести групу в форматі "ТТ-ЧЧ"
+      </div>
+
+      <label for="phone">Телефон</label><br>
+      <input maxlength="15" id="phone" type="tel" required
+             placeholder="(ЧЧЧ)-ЧЧЧ-ЧЧ-ЧЧ" pattern="\(\d{3}\)-\d{3}-\d{2}-\d{2}"><br>
+      <div id="invalid-phone" class="error" hidden>
+        Потрібно ввести телефон в форматі "(ЧЧЧ)-ЧЧЧ-ЧЧ-ЧЧ"
+      </div>
+
+      <label for="idCard">ID-card</label><br>
+      <input maxlength="10" id="idCard" type="text" required
+             placeholder="ТТ №ЧЧЧЧЧЧ" pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{2} №[0-9]{6}"><br>
+      <div id="invalid-ID-card" class="error" hidden>
+        Потрібно ввести ID-card в форматі "ТТ №ЧЧЧЧЧЧ"
+      </div>
+
+
+      <label for="faculty">Факультет</label><br>
+      <input maxlength="10" id="faculty" type="text" required
+             placeholder="ТТТТ" pattern="[A-Za-zА-Яа-яЁёІіЇїЄє]{3,10}"><br>
+      <div id="invalid-faculty" class="error" hidden>
+        Потрібно ввести факультет в форматі "ТТТТ"
+      </div>
+
+      <div>
+        <button class="btn" type="submit">Натиснути</button>
+      </div>
+    </form>
+
+    <div id="res">
+      <h3>Дані з форми</h3>
+      <p id="result-PIB"></p>
+      <p id="result-group"></p>
+      <p id="res-phone"></p>
+      <p id="res-ID-card"></p>
+      <p id="res-faculty"></p>
+    </div>
+  </div>
+
+  <script type="text/javascript" src="script.js"></script>
+</body>
