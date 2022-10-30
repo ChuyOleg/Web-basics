@@ -1,0 +1,14 @@
+.catalog {
+    background-color: #c4b2a1;
+    padding-top: 20px;
+}
+
+.fruitsTitle {
+    text-align: center;
+    margin-top: 0;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}

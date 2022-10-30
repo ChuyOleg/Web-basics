@@ -1,5 +1,6 @@
 import './App.css';
 import About from './component/task_1/About';
+import Catalog from './component/task_2/Catalog';
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
@@ -8,7 +9,7 @@ function App() {
         <div className='content'>
           <Routes>
             <Route index path="/" element={<About />} />
-            {/*<Route path="/catalog" element={<Catalog />} />*/}
+            <Route path="/catalog" element={<Catalog />} />
           </Routes>
         </div>
       </Router>
