@@ -1,0 +1,12 @@
+.registration-form {
+    border: 2px solid black;
+    box-shadow: 0 0 5px 1px black;
+}
+
+.registration-form .error-message {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 3px;
+    margin-bottom: 7px;
+}
