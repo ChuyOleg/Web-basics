@@ -4,16 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b6c59a3a-66b3-4cdc-b122-bb15820a8d94" name="Changes" comment="Lab_8_1: init structure for lab №8">
-      <change afterPath="$PROJECT_DIR$/src/components/Account.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/Login.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SignUp.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/SignUp.js" afterDir="false" />
+    <list default="true" id="b6c59a3a-66b3-4cdc-b122-bb15820a8d94" name="Changes" comment="Lab_8_2: implement login and registration pages with validation">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,6 +49,7 @@
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
     "go.sdk.automatically.set": "true",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/Web-basics/lab_8/backend",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -92,7 +85,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1667143710426</updated>
-      <workItem from="1667143713564" duration="8987000" />
+      <workItem from="1667143713564" duration="9135000" />
+      <workItem from="1667205907586" duration="614000" />
     </task>
     <task id="LOCAL-00001" summary="Lab_8_1: init structure for lab №8">
       <created>1667143875048</created>
@@ -101,7 +95,14 @@
       <option name="project" value="LOCAL" />
       <updated>1667143875048</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Lab_8_2: implement login and registration pages with validation">
+      <created>1667166688798</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1667166688798</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -120,7 +121,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Lab_8_1: init structure for lab №8" />
-    <option name="LAST_COMMIT_MESSAGE" value="Lab_8_1: init structure for lab №8" />
+    <MESSAGE value="Lab_8_2: implement login and registration pages with validation" />
+    <option name="LAST_COMMIT_MESSAGE" value="Lab_8_2: implement login and registration pages with validation" />
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
