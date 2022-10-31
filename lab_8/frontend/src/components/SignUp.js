@@ -1,6 +1,8 @@
 import React, {useEffect, useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './SignUp.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from "axios";
 
 const SignUp = () => {
 
@@ -22,7 +24,11 @@ const SignUp = () => {
     const [emailError, setEmailError] = useState("Enter a valid email")
     const [phoneError, setPhoneError] = useState("Enter a phone number based on pattern (xxx)-xxx-xx-xx")
 
+    const [loginOccupied, setLoginOccupied] = useState(false)
+
     const [formValid, setFormValid] = useState(false)
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (loginError || passwordError || passwordCopyError || emailError || phoneError) {
@@ -75,6 +81,11 @@ const SignUp = () => {
             }
         } else {
             setPasswordError('')
+            if (e.target.value !== passwordCopy) {
+                setPasswordCopyError('Passwords don\'t match')
+            } else {
+                setPasswordCopyError('')
+            }
         }
     }
 
@@ -110,13 +121,31 @@ const SignUp = () => {
         }
     }
 
+    const submitHandler = e => {
+        e.preventDefault()
+
+        const URL = "http://192.168.56.1:8080/signUp";
+
+        axios.post(URL, { "login": login, "password": password, "email": email, "phone": phone })
+            .then(() => {
+                setLoginOccupied(false)
+                navigate('/');
+            })
+            .catch(() => {
+                setLoginOccupied(true)
+                setLogin('')
+            })
+    }
+
     return (
         <div id="registration">
             <div className="container">
                 <div id="registration-row" className="row justify-content-center align-items-center mt-4 mb-5">
                     <div className="col-10 col-lg-6 p-4 registration-form">
-                        <form action="/registration" method="post" autoComplete="off">
+                        <form onSubmit={e => submitHandler(e)} autoComplete="off">
                             <h3 className="text-center mt-3">Sign up</h3>
+
+                            {loginOccupied && <div className='error-message text-center'>User with this login already exists</div>}
 
                             <div className="form-group">
                                 <label htmlFor="login">Login:</label><br/>

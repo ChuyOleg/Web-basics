@@ -1,6 +1,8 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Login.css';
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from 'axios';
 
 const Login = () => {
 
@@ -12,8 +14,11 @@ const Login = () => {
 
     const [loginError, setLoginError] = useState('Enter your login')
     const [passwordError, setPasswordError] = useState('Enter your password')
+    const [credentialValid, setCredentialValid] = useState(true)
 
     const [formValid, setFormValid] = useState(false)
+
+    const navigate = useNavigate();
 
     useEffect(() => {
         if (loginError || passwordError) {
@@ -54,24 +59,38 @@ const Login = () => {
         }
     }
 
-    useEffect(() => {
-        // setFruit(require('./fruits.json').fruits)
-        // fetch('./fruits.json')
-        //     .then((res) => res.json())
-        //     .then((res) => setFruit(res));
-    }, []);
+    const submitHandler = e => {
+        e.preventDefault()
+
+        const URL = "http://192.168.56.1:8080/login";
+
+        axios.post(URL, { "login": login, "password": password })
+            .then(() => {
+                setCredentialValid(true)
+                navigate({
+                    pathname: '/account',
+                    search: '?login=' + login
+                });
+            })
+            .catch(() => {
+                setCredentialValid(false)
+                setPassword('')
+            })
+    }
 
     return (
         <div id="login">
             <div className="container">
                 <div id="login-row" className="row justify-content-center align-items-center mt-4">
                     <div className="login-form mt-5 p-4 col-lg-6 col-10">
-                        <form action="/login" method="post">
+                        <form onSubmit={e => submitHandler(e)}>
                             <h3 className="text-center mt-4">Sign in</h3>
 
                             <div className="form-text text-center mt-4 mb-2">
                                 <span>Do not have an account?</span> <a href="/signUp">Sign up</a>
                             </div>
+
+                            {!credentialValid && <div className='error-message text-center'>Invalid Credential</div>}
 
                             <div>
                                 <label htmlFor="login">Login</label><br/>

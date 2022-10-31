@@ -1,0 +1,59 @@
+.update-form {
+    border: 2px solid black;
+    box-shadow: 0 0 5px 1px black;
+    background: #61dafb;
+}
+
+.update-form .error-message {
+    color: red;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 3px;
+    margin-bottom: 7px;
+}
+
+.update-form .success-message {
+    color: green;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: 3px;
+    margin-bottom: 7px;
+}
+
+.update-form .loginField {
+    font-weight: bold;
+    font-style: italic;
+}
+
+.logout-block {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #61dafb;
+}
+
+.logout-block:hover {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #ee4040;
+}
+
+.logout-block a {
+    display: inline-block;
+    font-weight: bold;
+    height: 50px;
+    line-height: 46px;
+    width: 100px;
+    border: 2px solid black;
+    color: black;
+    vertical-align: middle;
+}
+
+.logout-block a:hover {
+    display: inline-block;
+    height: 50px;
+    width: 100px;
+    border: 2px solid black;
+    color: black;
+}
