@@ -1,0 +1,24 @@
+#reduceImgSize:hover, #increaseImgSize:hover {
+    background-color: yellow;
+    cursor: pointer;
+}
+
+#addImg {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+#addImg:hover {
+    background-color: green;
+    cursor: pointer;
+}
+
+#removeImg:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+.img-container img {
+    display: block;
+    margin-bottom: 15px;
+}

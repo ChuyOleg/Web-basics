@@ -1,0 +1,40 @@
+{
+  "fruits": [
+    {
+      "title": "Dragon fruit",
+      "id": 1,
+      "image": "dragonFruit.jpg",
+      "price": 210
+    },
+    {
+      "title": "Kiwi",
+      "id": 2,
+      "image": "kiwi.jpg",
+      "price": 170
+    },
+    {
+      "title": "Melon",
+      "id": 3,
+      "image": "melon.jpg",
+      "price": 130
+    },
+    {
+      "title": "Peach",
+      "id": 4,
+      "image": "peach.jpg",
+      "price": 105
+    },
+    {
+      "title": "Pineapple",
+      "id": 5,
+      "image": "pineapple.jpg",
+      "price": 145
+    },
+    {
+      "title": "Tangerine",
+      "id": 6,
+      "image": "tangerine.jpg",
+      "price": 70
+    }
+  ]
+}
